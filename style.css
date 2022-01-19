@@ -223,10 +223,13 @@ nav {
     line-height: 30px;
 }
 
-.form {}
+.form {
+    padding-left: 10px;
+}
 
 .form h1 {
-    padding: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
 }
 
 .form-row .form-label {
@@ -248,6 +251,47 @@ nav {
     height: 30px;
     background-color: blue;
     color: white;
+}
+
+.komen-list {
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.komen-list .komen {
+    border: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.isikomen h5 {
+    border-bottom: 1px solid black;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.isikomen h5 p {
+    display: inline;
+    font-size: 15px;
+}
+
+.isikomen {
+    padding: 10px;
+}
+
+.isikomen1 {
+    width: 80%;
+    padding: 10px;
+}
+
+.komen a {
+    display: block;
+}
+
+.komen button {
+    width: 100px;
+    height: 30px;
 }
 
 

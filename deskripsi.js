@@ -30,8 +30,8 @@ $(function() {
         komentar.forEach(function(e) {
             var li = $(`<li class="komen">
             <div class="isikomen">
-            <h3 class="judulkomen">${e.title}</h3>
-            <p class="isikomen">${e.description}</p>
+            <h5 class="judulkomen"><p>Nama Wisata :</p> ${e.title}</h3>
+            <p class="isikomen1"><a>Komentar :</a> ${e.description}</p>
             </div>
             <button class="btn-delete" data-id="${e.id}">Hapus</button>
         </li>`);
