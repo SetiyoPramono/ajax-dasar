@@ -229,7 +229,10 @@ nav {
 
 .form h1 {
     margin-bottom: 5px;
-    border-bottom: 1px solid black;
+}
+
+.form-row {
+    line-height: 30p;
 }
 
 .form-row .form-label {
@@ -253,15 +256,21 @@ nav {
     color: white;
 }
 
+.form-button:hover {
+    background-color: rgb(0, 0, 155);
+}
+
 .komen-list {
     margin-left: 10px;
     margin-top: 30px;
 }
 
 .komen-list .komen {
-    border: 1px solid black;
+    box-shadow: 1px 1px 5px grey;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    background-color: rgb(243, 243, 243);
+    width: 80%;
 }
 
 .isikomen h5 {
@@ -287,11 +296,13 @@ nav {
 
 .komen a {
     display: block;
+    margin-bottom: 10px;
 }
 
 .komen button {
     width: 100px;
     height: 30px;
+    margin-left: 20px;
 }
 
 
