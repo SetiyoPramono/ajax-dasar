@@ -7,7 +7,7 @@ $(function() {
     var list = $(".komen-list");
     var url = "http://localhost:3000";
 
-    function loadMovies() {
+    function readkomen() {
 
         $.ajax({
                 method: "GET",
@@ -15,7 +15,7 @@ $(function() {
                 dataType: "json"
             }).done(function(response) {
                 list.empty();
-                insertMovies(response);
+                insertkomen(response);
 
             })
             .fail(function(error) {
@@ -23,10 +23,10 @@ $(function() {
             })
     }
 
-    loadMovies();
+    readkomen();
 
 
-    function insertMovies(komentar) {
+    function insertkomen(komentar) {
         komentar.forEach(function(e) {
             var li = $(`<li class="komen">
             <div class="isikomen">
@@ -40,8 +40,8 @@ $(function() {
     }
 
 
-    function addMovie(title, description) {
-        var film = {
+    function addkomen(title, description) {
+        var kom = {
             "title": title,
             "description": description
         };
@@ -49,9 +49,9 @@ $(function() {
                 method: "POST",
                 url: url + "/komentar",
                 dataType: "json",
-                data: film
+                data: kom
             }).done(function(response) {
-                loadMovies();
+                readkomen();
             })
             .fail(function(error) {
                 console.log(error);
@@ -63,7 +63,7 @@ $(function() {
 
     form.on("submit", function(e) {
         e.preventDefault();
-        addMovie(inputTitle.val(), inputDescription.val());
+        addkomen(inputTitle.val(), inputDescription.val());
         inputTitle.val("");
         inputDescription.val("");
     });
@@ -72,13 +72,13 @@ $(function() {
 
 
 
-    function removeMovie(id) {
+    function removekomen(id) {
         $.ajax({
                 method: "DELETE",
                 url: url + "/komentar/" + id,
                 dataType: "json",
             }).done(function(response) {
-                loadMovies();
+                readkomen();
             })
             .fail(function(error) {
                 console.log(error);
@@ -88,7 +88,7 @@ $(function() {
 
     list.on("click", ".btn-delete", function() {
         var id = $(this).data("id");
-        removeMovie(id);
+        removekomen(id);
 
     });
 
